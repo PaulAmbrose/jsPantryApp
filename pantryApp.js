@@ -79,7 +79,41 @@ class Kitchen {
     }
   }
 
+  class FoodItem {
+
+    constructor(name, container, amountMetric, weight, volume, number) {
+      this.name = name;
+      this.container = container;
+      this.amountMetric = amountMetric;
+      this.weight = weight;
+      this.volume = volume;
+      this.number = number;
+    }
+  
+    addAmount(amount) {
+      if (this.amountMetric === "weight") {
+        this.weight += amount;
+      } else if (this.amountMetric === "volume") {
+        this.volume += amount;
+      } else if (this.amountMetric === "number") {
+        this.number += amount;
+      }
+    }
+  
+    removeAmount(amount) {
+      if (this.amountMetric === "weight") {
+        this.weight -= amount;
+      } else if (this.amountMetric === "volume") {
+        this.volume -= amount;
+      } else if (this.amountMetric === "number") {
+        this.number -= amount;
+      }
+    }
+  
+  }
+  
+
 let homeKitchen = new Kitchen;
-console.log(homeKitchen);
-homeKitchen.freezer.addItem("Frozen Fish");
-console.log(homeKitchen);
+let FrozenFish = new FoodItem("FrozenFish", "Box", "number", "", "", 12)
+homeKitchen.freezer.addItem(FrozenFish);
+console.log(homeKitchen.freezer.contents[0].name);
