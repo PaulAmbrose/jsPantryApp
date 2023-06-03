@@ -6,9 +6,9 @@
 class Kitchen {
 
     constructor() {
-      this.fridge = new Fridge();
-      this.freezer = new Freezer();
-      this.storeCupboards = new StoreCupboards();
+      this.Fridge = new Fridge();
+      this.Freezer = new Freezer();
+      this.StoreCupboards = new StoreCupboards();
     }  
 
   }
@@ -81,39 +81,43 @@ class Kitchen {
 
   class FoodItem {
 
-    constructor(name, container, amountMetric, weight, volume, number) {
+    constructor(name, weight, volume, number) {
       this.name = name;
-      this.container = container;
-      this.amountMetric = amountMetric;
       this.weight = weight;
       this.volume = volume;
       this.number = number;
     }
   
     addAmount(amount) {
-      if (this.amountMetric === "weight") {
-        this.weight += amount;
-      } else if (this.amountMetric === "volume") {
-        this.volume += amount;
-      } else if (this.amountMetric === "number") {
-        this.number += amount;
-      }
+      this.weight = this.weight + amount
+      this.volume = this.volume + amount
+      this.number = this.number + amount
     }
   
     removeAmount(amount) {
-      if (this.amountMetric === "weight") {
-        this.weight -= amount;
-      } else if (this.amountMetric === "volume") {
-        this.volume -= amount;
-      } else if (this.amountMetric === "number") {
-        this.number -= amount;
-      }
+      this.weight = this.weight - amount
+      this.volume = this.volume - amount
+      this.number = this.number - amount
     }
-  
+
   }
   
+function createFoodItem(){
+  const FoodItemName = prompt("Please enter the food items name: ")
+  const FoodItemAmount = prompt("Please enter the amount of the item to add:  ")
+  return {
+    name: foodItemName,
+    amount: foodItemAmount
+  };
+}
 
+//Created a kitchen
 let homeKitchen = new Kitchen;
-let FrozenFish = new FoodItem("FrozenFish", "Box", "number", "", "", 12)
-homeKitchen.freezer.addItem(FrozenFish);
-console.log(homeKitchen.freezer.contents[0].name);
+
+//Create a food item ready to add to an area
+const button = document.getElementById("createFoodItemButton");
+console.log(button);
+button.addEventListener("click", function(event) {
+  console.log("Create food item clicked");
+}, false);
+  
