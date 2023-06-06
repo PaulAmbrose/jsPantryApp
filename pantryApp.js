@@ -3,6 +3,8 @@
 //Create a kitchen object, this will contain 3 further objects:  Fridge, Freezer, StoreCupboards
 // Each of these will contain a list of contents, a getter and setter method to add and remove contents, and a method to list contents
 
+"use strict";
+
 class Kitchen {
 
     constructor() {
@@ -81,13 +83,20 @@ class Kitchen {
 
   class FoodItem {
 
-    constructor(name, weight, volume, number) {
+    constructor(name, weight = 0 , volume = 0, number = 0) {
       this.name = name;
       this.weight = weight;
       this.volume = volume;
       this.number = number;
     }
-  
+
+    getItemDetails(){
+      const FoodItemName = prompt("Please enter the food items name: ")
+      const FoodItemMetric = prompt("Please enter the food items metric (weight, volume or number):  ")
+      const FoodItemAmount = prompt("Please enter the amount of the item to add:  ")
+      this.addAmount()
+    }
+
     addAmount(amount) {
       this.weight = this.weight + amount
       this.volume = this.volume + amount
@@ -99,25 +108,14 @@ class Kitchen {
       this.volume = this.volume - amount
       this.number = this.number - amount
     }
-
   }
-  
-function createFoodItem(){
-  const FoodItemName = prompt("Please enter the food items name: ")
-  const FoodItemAmount = prompt("Please enter the amount of the item to add:  ")
-  return {
-    name: foodItemName,
-    amount: foodItemAmount
-  };
-}
 
 //Created a kitchen
-let homeKitchen = new Kitchen;
+const createKitchenButton = document.getElementById("create-kitchen");
 
-//Create a food item ready to add to an area
-const button = document.getElementById("createFoodItemButton");
-console.log(button);
-button.addEventListener("click", function(event) {
-  console.log("Create food item clicked");
-}, false);
-  
+createKitchenButton.addEventListener("click", function() {
+  let newKitchen = new Kitchen();
+  console.log(newKitchen);
+});
+
+//Create a food item
