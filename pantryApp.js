@@ -83,30 +83,18 @@ class Kitchen {
 
   class FoodItem {
 
-    constructor(name, weight = 0 , volume = 0, number = 0) {
-      this.name = name;
-      this.weight = weight;
-      this.volume = volume;
-      this.number = number;
+    constructor() {
+      let itemDetails = this.getItemDetails();
+      this.name = itemDetails[0];
+      this.metric = itemDetails[1];
+      this.amount = itemDetails[2];   
     }
 
     getItemDetails(){
-      const FoodItemName = prompt("Please enter the food items name: ")
-      const FoodItemMetric = prompt("Please enter the food items metric (weight, volume or number):  ")
-      const FoodItemAmount = prompt("Please enter the amount of the item to add:  ")
-      this.addAmount()
-    }
-
-    addAmount(amount) {
-      this.weight = this.weight + amount
-      this.volume = this.volume + amount
-      this.number = this.number + amount
-    }
-  
-    removeAmount(amount) {
-      this.weight = this.weight - amount
-      this.volume = this.volume - amount
-      this.number = this.number - amount
+      var FoodItemName = prompt("Please enter the food items name: ")
+      var FoodItemMetric = prompt("Please enter the food items metric (weight, volume or number):  ")
+      var FoodItemAmount = prompt("Please enter the amount of the item to add:  ")
+      return [FoodItemName, FoodItemMetric, FoodItemAmount];
     }
   }
 
@@ -115,7 +103,15 @@ const createKitchenButton = document.getElementById("create-kitchen");
 
 createKitchenButton.addEventListener("click", function() {
   let newKitchen = new Kitchen();
+  console.log("New kitchen created");
   console.log(newKitchen);
 });
 
 //Create a food item
+const createFoodButton = document.getElementById("create-food");
+
+createFoodButton.addEventListener("click", function() {
+  let newFood = new FoodItem();
+  console.log("New food created");
+  console.log(newFood);
+});
