@@ -109,7 +109,6 @@ const createKitchenButton = document.getElementById("create-kitchen");
 createKitchenButton.addEventListener("click", function() {
   let newKitchen = new Kitchen();
   console.log("New kitchen created");
-  console.log(newKitchen);
   kitchens.push(newKitchen);
   console.log(kitchens);
 });
