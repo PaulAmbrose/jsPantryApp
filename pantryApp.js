@@ -5,12 +5,15 @@
 
 "use strict";
 
+let kitchens = [];
+
 class Kitchen {
 
     constructor() {
       this.Fridge = new Fridge();
       this.Freezer = new Freezer();
       this.StoreCupboards = new StoreCupboards();
+      this.Unsorted = []
     }  
 
   }
@@ -98,6 +101,8 @@ class Kitchen {
     }
   }
 
+console.log(kitchens);
+
 //Created a kitchen
 const createKitchenButton = document.getElementById("create-kitchen");
 
@@ -105,6 +110,8 @@ createKitchenButton.addEventListener("click", function() {
   let newKitchen = new Kitchen();
   console.log("New kitchen created");
   console.log(newKitchen);
+  kitchens.push(newKitchen);
+  console.log(kitchens);
 });
 
 //Create a food item
