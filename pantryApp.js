@@ -10,11 +10,18 @@ let kitchens = [];
 class Kitchen {
 
     constructor() {
+      let kitchenName = this.getKitchenName();
+      this.Name = kitchenName;
       this.Fridge = new Fridge();
       this.Freezer = new Freezer();
       this.StoreCupboards = new StoreCupboards();
       this.Unsorted = []
     }  
+
+    getKitchenName() {
+      var usersNameForKitchen = prompt("Please enter the kitchens name: ");
+      return usersNameForKitchen;
+    }
 
   }
   
