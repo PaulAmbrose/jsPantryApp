@@ -11,6 +11,8 @@ import * as FoodItem from "./js_code/food_Item.js";
 //Created a kitchen
 const createKitchenButton = document.getElementById("create-kitchen");
 
+console.log(createKitchenButton);
+
 createKitchenButton.addEventListener("click", function() {
   let newKitchen = new kitchen();
   console.log("New kitchen created");
