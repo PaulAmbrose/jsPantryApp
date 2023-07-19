@@ -17,4 +17,4 @@ class FoodItem {
     }
   }
 
-  export{foodItem};
+  export{FoodItem};

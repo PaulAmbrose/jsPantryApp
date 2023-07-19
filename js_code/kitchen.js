@@ -86,4 +86,4 @@ class Kitchen {
     }
   }
 
-  export{kitchen};
+  export{kitchens};

@@ -6,16 +6,16 @@
 "use strict";
 
 import * as kitchen from "./js_code/kitchen.js";
-import * as foodItem from "./js_code/foodItem.js";
+import * as FoodItem from "./js_code/food_Item.js";
 
 //Created a kitchen
 const createKitchenButton = document.getElementById("create-kitchen");
 
 createKitchenButton.addEventListener("click", function() {
-  let newKitchen = new Kitchen();
+  let newKitchen = new kitchen();
   console.log("New kitchen created");
-  kitchens.push(newKitchen);
-  console.log(kitchens);
+  kitchen.push(newKitchen);
+  console.log(kitchen);
 });
 
 //Create a food item
