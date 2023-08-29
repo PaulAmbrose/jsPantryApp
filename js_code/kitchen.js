@@ -10,6 +10,7 @@ class Kitchen {
       this.Fridge = new Fridge();
       this.Freezer = new Freezer();
       this.StoreCupboards = new StoreCupboards();
+      this.FruitBowl = new FruitBowl();
       this.Unsorted = []
     }  
 
@@ -80,6 +81,28 @@ class Kitchen {
   
     listContents() {
       console.log("The contents of the store cupboards are:");
+      for (const item of this.contents) {
+        console.log(item);
+      }
+    }
+  }
+
+  class FruitBowl {
+  
+    constructor() {
+      this.contents = [];
+    }
+  
+    addItem(item) {
+      this.contents.push(item);
+    }
+  
+    removeItem(item) {
+      this.contents.splice(this.contents.indexOf(item), 1);
+    }
+  
+    listContents() {
+      console.log("The contents of the FruitBowl are:");
       for (const item of this.contents) {
         console.log(item);
       }
