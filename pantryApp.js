@@ -5,21 +5,16 @@
 
 "use strict";
 
-let myKitchen;
-
-import * as kitchen from "./js_code/kitchen.js";
-import * as FoodItem from "./js_code/food_Item.js";
+import { Kitchen }  from "./js_code/kitchen.js";
+import { FoodItem } from "./js_code/food_Item.js";
 
 //Created a kitchen
 const createKitchenButton = document.getElementById("create-kitchen");
 
-console.log(createKitchenButton);
-
 createKitchenButton.addEventListener("click", function() {
-  let myKitchen = new kitchen();
+  let myKitchen = new Kitchen();
   console.log("New kitchen created");
-  kitchen.push(myKitchen);
-  console.log(kitchen);
+  console.log(myKitchen);
 });
 
 //Create a food item
