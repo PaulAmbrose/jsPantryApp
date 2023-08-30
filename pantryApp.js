@@ -5,7 +5,7 @@
 
 "use strict";
 
-import { Kitchen }  from "./js_code/kitchen.js";
+import { Kitchen } from "./js_code/kitchen.js";
 import { FoodItem } from "./js_code/food_Item.js";
 
 //Created a kitchen
@@ -13,8 +13,6 @@ const createKitchenButton = document.getElementById("create-kitchen");
 
 createKitchenButton.addEventListener("click", function() {
   let myKitchen = new Kitchen();
-  console.log("New kitchen created");
-  console.log(myKitchen);
 });
 
 //Create a food item
@@ -22,10 +20,7 @@ const createFoodButton = document.getElementById("create-food");
 
 createFoodButton.addEventListener("click", function() {
   let newFood = new FoodItem();
-  console.log("New food created");
-  console.log(newFood);
 });
 
 //Add item
 const addItemButton = document.getElementById("add-food-item-to-location");
-
