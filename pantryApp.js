@@ -25,3 +25,7 @@ createFoodButton.addEventListener("click", function() {
   console.log("New food created");
   console.log(newFood);
 });
+
+//Add item
+const addItemButton = document.getElementById("add-food-item-to-location");
+
