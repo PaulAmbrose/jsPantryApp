@@ -15,10 +15,10 @@ class Kitchen {
       this.unsorted = []
     }  
 
-    getKitchenName() {
+    /*getKitchenName() {
       var usersNameForKitchen = prompt("Please enter the kitchens name: ");
       return usersNameForKitchen;
-    }
+    }*/
   }
   
   class Fridge {
