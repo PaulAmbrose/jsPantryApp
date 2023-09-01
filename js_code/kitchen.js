@@ -5,8 +5,9 @@ let kitchens = [];
 class Kitchen {
 
     constructor() {
-      let kitchenName = this.getKitchenName();
-      this.Name = kitchenName;
+      //let kitchenName = this.getKitchenName();
+      //this.Name = kitchenName;
+      this.Name = "TestKitchen";
       this.Fridge = new Fridge();
       this.Freezer = new Freezer();
       this.StoreCupboards = new StoreCupboards();

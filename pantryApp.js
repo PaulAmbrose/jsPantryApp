@@ -10,6 +10,7 @@ import { Kitchen } from "./js_code/kitchen.js";
 import { FoodItem } from "./js_code/food_Item.js";
 
 //indexes and arrays
+let kitchenIndex = new Array();
 let foodItemIndex = new Array();
 
 //--------------------------------------------------------------------------------------------
@@ -17,18 +18,20 @@ let foodItemIndex = new Array();
 //Create a kitchen
 const createKitchenButton = document.getElementById("create-kitchen");
 
-  createKitchenButton.addEventListener("click", function() {
+  createKitchenButton.addEventListener("click", function(){
     let myKitchen = new Kitchen();
-    console.log(myKitchen);
-  });
+        kitchenIndex.push(myKitchen);
+      //TEST#1
+      console.log(kitchenIndex);
+    });
 
 //Create a food item - set to unsorted
 const createFoodButton = document.getElementById("create-food");
 
   createFoodButton.addEventListener("click", function() {
     let newFood = new FoodItem();
-    console.log(newFood);
       foodItemIndex.push(newFood);
+     //TEST#2
     console.log(foodItemIndex);
   });
 
@@ -36,8 +39,7 @@ const createFoodButton = document.getElementById("create-food");
 const addItemButton = document.getElementById("add-food-item-to-location");
 
   addItemButton.addEventListener("click", function() {
-    
-    console.log("test");
+
 })
 
 //Remove item
