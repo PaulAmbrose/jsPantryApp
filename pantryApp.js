@@ -35,10 +35,20 @@ const createFoodButton = document.getElementById("create-food");
 //Add item
 const addItemButton = document.getElementById("add-food-item-to-location");
 
-  addItemButton.addEventListener("click", function(foodItemIndex) {
+  addItemButton.addEventListener("click", function() {
 
-    var getItemToUse = prompt("\nPlease enter the item number you wish to move :");
-
+      var listItems = [];
+      for (var i = 0; i < foodItemIndex.length; i++) {
+        listItems.push(i + 1 + ": " + foodItemIndex[i]);
+      }
+    
+      var message = "Please select an item from the list:";
+      var options = {
+        title: "List Selection",
+        list: listItems,
+      };
+    
+      var result = window.alert(message, options);
   });
 
 //Remove item
