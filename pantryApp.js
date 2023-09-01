@@ -35,10 +35,9 @@ const createFoodButton = document.getElementById("create-food");
 //Add item
 const addItemButton = document.getElementById("add-food-item-to-location");
 
-createFoodButton.addEventListener("click", function() {
-
-  console.log("test");
-
+  addItemButton.addEventListener("click", function() {
+    
+    console.log("test");
 })
 
 //Remove item
