@@ -31,12 +31,14 @@ const createFoodButton = document.getElementById("create-food");
       foodItemIndex.push(newFood);
     console.log(foodItemIndex);
   });
+
 //Add item
 const addItemButton = document.getElementById("add-food-item-to-location");
 
-  addItemButton.addEventListener("click", function() {
-    
-    console.log("Test");
+  addItemButton.addEventListener("click", function(foodItemIndex) {
+
+    var getItemToUse = prompt("\nPlease enter the item number you wish to move :");
+
   });
 
 //Remove item
