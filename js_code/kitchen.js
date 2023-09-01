@@ -11,7 +11,7 @@ class Kitchen {
       this.Freezer = new Freezer();
       this.StoreCupboards = new StoreCupboards();
       this.FruitBowl = new FruitBowl();
-      this.Unsorted = []
+      this.unsorted = []
     }  
 
     getKitchenName() {

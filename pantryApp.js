@@ -5,22 +5,38 @@
 
 "use strict";
 
+//Housekeeping - imports
 import { Kitchen } from "./js_code/kitchen.js";
 import { FoodItem } from "./js_code/food_Item.js";
 
-//Created a kitchen
+//indexes and arrays
+let foodItemIndex = new Array();
+
+//--------------------------------------------------------------------------------------------
+
+//Create a kitchen
 const createKitchenButton = document.getElementById("create-kitchen");
 
-createKitchenButton.addEventListener("click", function() {
-  let myKitchen = new Kitchen();
-});
+  createKitchenButton.addEventListener("click", function() {
+    let myKitchen = new Kitchen();
+    console.log(myKitchen);
+  });
 
-//Create a food item
+//Create a food item - set to unsorted
 const createFoodButton = document.getElementById("create-food");
 
-createFoodButton.addEventListener("click", function() {
-  let newFood = new FoodItem();
-});
-
+  createFoodButton.addEventListener("click", function() {
+    let newFood = new FoodItem();
+    console.log(newFood);
+      foodItemIndex.push(newFood);
+    console.log(foodItemIndex);
+  });
 //Add item
 const addItemButton = document.getElementById("add-food-item-to-location");
+
+  addItemButton.addEventListener("click", function() {
+    
+    console.log("Test");
+  });
+
+//Remove item
