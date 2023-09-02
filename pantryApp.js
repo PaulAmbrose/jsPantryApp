@@ -13,7 +13,9 @@ import { FoodItem } from "./js_code/food_Item.js";
 const createKitchenButton = document.getElementById("create-kitchen");
 const createFoodButton = document.getElementById("create-food");
 const addItemButton = document.getElementById("add-food-item-to-location");
+const removeItemButton = document.getElementById("remove-food-item-from-location");
 
+//Global variables
 var myKitchen;
 var newFood;
 
@@ -35,10 +37,13 @@ var newFood;
 
 //Add item
   addItemButton.addEventListener("click", function() {
-    
-      myKitchen.FruitBowl.listContents();
       myKitchen.FruitBowl.addItem(newFood);  
       myKitchen.FruitBowl.listContents();
-})
+  })
 
 //Remove item
+  removeItemButton.addEventListener("click", function() {
+      myKitchen.FruitBowl.removeItem(newFood);  
+      myKitchen.FruitBowl.listContents();
+  });
+    
