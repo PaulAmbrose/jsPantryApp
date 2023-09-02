@@ -14,33 +14,31 @@ const createKitchenButton = document.getElementById("create-kitchen");
 const createFoodButton = document.getElementById("create-food");
 const addItemButton = document.getElementById("add-food-item-to-location");
 
-//indexes and arrays
-let kitchenIndex = new Array();
-let foodItemIndex = new Array();
+var myKitchen;
+var newFood;
 
 //--------------------------------------------------------------------------------------------
 
 //Create a kitchen
   createKitchenButton.addEventListener("click", function(){
-    let myKitchen = new Kitchen();
-        kitchenIndex.push(myKitchen);
+    myKitchen = new Kitchen();
     //TEST#1
-    console.log(kitchenIndex);
+    console.log(myKitchen);
     });
 
 //Create a food item
   createFoodButton.addEventListener("click", function() {
-    let newFood = new FoodItem();
-      foodItemIndex.push(newFood);
+    newFood = new FoodItem();
     //TEST#2
-    console.log(foodItemIndex);
+    console.log(newFood);
   });
 
 //Add item
   addItemButton.addEventListener("click", function() {
-    let activeKitchen = kitchenIndex[0];
-    //TEST#3
-    console.log(activeKitchen);
+    
+      myKitchen.FruitBowl.listContents();
+      myKitchen.FruitBowl.addItem(newFood);  
+      myKitchen.FruitBowl.listContents();
 })
 
 //Remove item
